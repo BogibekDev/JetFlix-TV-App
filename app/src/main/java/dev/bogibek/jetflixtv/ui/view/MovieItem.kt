@@ -22,7 +22,7 @@ import androidx.tv.material3.ExperimentalTvMaterial3Api
 import androidx.tv.material3.Text
 import coil.compose.SubcomposeAsyncImage
 import dev.bogibek.jetflixtv.model.Movie
-import dev.bogibek.tvjetflix.util.movie
+import dev.bogibek.jetflixtv.util.movie
 
 @OptIn(ExperimentalTvMaterial3Api::class)
 @Composable
@@ -49,7 +49,7 @@ fun MovieItem(
         ) {
             SubcomposeAsyncImage(
                 modifier = Modifier.fillMaxSize(),
-                model = movie.thumbnail,
+                model = "https://image.tmdb.org/t/p/w500${movie.backdrop_path}",
                 contentDescription = "",
                 loading = {
                     LoadingView()
@@ -81,7 +81,7 @@ fun MovieItem(
                     }
 
                     Text(
-                        text = movie.description,
+                        text = movie.overview,
                         fontSize = 10.sp,
                         color = Color.White,
                         maxLines = 1,

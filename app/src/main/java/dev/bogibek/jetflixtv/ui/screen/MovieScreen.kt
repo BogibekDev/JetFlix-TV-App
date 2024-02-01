@@ -14,11 +14,12 @@ fun MovieScreen(
     sharedViewModel: SharedViewModel
 ) {
 
-    val movie = sharedViewModel.data as Movie?
+    val movie = sharedViewModel.data as Movie
 
     MyVideoPlayer(
         modifier = Modifier
             .fillMaxSize(),
-        videoUrl = movie?.videoUrl ?: ""
+        videoUrl = movie.videoUrl
+            ?: "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
     )
 }

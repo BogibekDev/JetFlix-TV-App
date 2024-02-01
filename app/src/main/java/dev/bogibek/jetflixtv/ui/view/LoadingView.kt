@@ -12,9 +12,11 @@ import com.airbnb.lottie.compose.LottieConstants
 import com.airbnb.lottie.compose.rememberLottieComposition
 
 @Composable
-fun LoadingView() {
+fun LoadingView(
+    modifier: Modifier=Modifier
+) {
     Box(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxSize(),
         contentAlignment = Alignment.Center
     ) {
